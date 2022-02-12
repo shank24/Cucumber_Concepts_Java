@@ -12,16 +12,33 @@ Feature: Add to cart
 
     @dummyScenario
     Scenario: Dummy Scenario 1
+      Given I have a savings account
+      And my account balance is $100
       Given I am dummy
-      When I am dummy
       When I do dummy things
       Then dummy things happen
 
   #Other Steps -> And, But, *
-  Rule: Rule 2
+  Rule: Rule 3
     Background: This is a background
 
-    Scenario: Dummy Scenario 2
+    Scenario: Dummy Scenario 3
+      Given I am at the grocery shop
+      * I have banana and
+      * I have cucumber
+      * I have grapes
+
+
+      When I do dummy things
+      Then dummy things happen
+
+  Rule: Rule 1
+    Background: This is a background
+
+    @dummyScenario
+    Scenario: Dummy Scenario 1
+      Given I have a savings account
+      And my account balance is $100
       Given I am dummy
       When I do dummy things
       Then dummy things happen
