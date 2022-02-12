@@ -9,6 +9,8 @@ Feature: Add to cart
 
   Rule: Rule 1
     Background: This is a background
+
+    @dummyScenario
     Scenario: Dummy Scenario
       Given I am dummy
       When I do dummy things
