@@ -34,4 +34,18 @@ public class MyStepdefs {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
+
+    @Given("My Account Balance is ${int}")
+    public void myAccountBalanceIs$(int arg0) {
+        
+    }
+
+    @When("I withdraw ${int}")
+    public void iWithdraw$(int arg0) {
+        
+    }
+
+    @Then("the account balance should be ${int}")
+    public void theAccountBalanceShouldBe$(int arg0) {
+    }
 }
