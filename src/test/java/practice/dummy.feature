@@ -11,15 +11,17 @@ Feature: Add to cart
     Background: This is a background
 
     @dummyScenario
-    Scenario: Dummy Scenario
+    Scenario: Dummy Scenario 1
       Given I am dummy
+      When I am dummy
       When I do dummy things
       Then dummy things happen
 
+  #Other Steps -> And, But, *
   Rule: Rule 2
     Background: This is a background
 
-    Scenario: Dummy Scenario
+    Scenario: Dummy Scenario 2
       Given I am dummy
       When I do dummy things
       Then dummy things happen
