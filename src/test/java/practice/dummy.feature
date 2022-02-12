@@ -1,4 +1,4 @@
-Feature:
+Feature: Dummy Feature
   Scenario: Dummy Scenario
     Given I am dummy
     When I do dummy things
