@@ -5,7 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-@CucumberOptions(plugin = "message:target/cucumber-report.ndjson")
+@CucumberOptions(
+        plugin =  {"pretty", "html:target/cucumber.html"}
+)
 public class TestNGRunnerTest extends AbstractTestNGCucumberTests {
 
     @BeforeClass
