@@ -1,4 +1,4 @@
-package dummy;
+package dummy.runners;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -11,7 +11,9 @@ import static io.cucumber.testng.CucumberOptions.SnippetType.CAMELCASE;
         snippets = CAMELCASE,
         dryRun = true,
         monochrome=true,
-        tags = "@Scenario1 and not @Scenario2"
+        tags = "@Scenario1 or @Scenario2",
+        glue = {"dummy.stepdef","dummy.hooks"},
+        features = "src/test/resources/dummy"
 )
 public class TestNGRunnerTest extends AbstractTestNGCucumberTests {
 

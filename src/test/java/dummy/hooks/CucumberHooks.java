@@ -1,4 +1,4 @@
-package dummy;
+package dummy.hooks;
 
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;

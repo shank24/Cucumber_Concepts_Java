@@ -1,4 +1,4 @@
-package dummy;
+package dummy.stepdef;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
