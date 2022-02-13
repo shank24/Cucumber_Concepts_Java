@@ -9,7 +9,8 @@ import static io.cucumber.testng.CucumberOptions.SnippetType.CAMELCASE;
 @CucumberOptions(
         plugin =  {"pretty", "html:target/cucumber.html", "summary"},
         snippets = CAMELCASE,
-        dryRun = true
+        dryRun = true,
+        monochrome=true
 )
 public class TestNGRunnerTest extends AbstractTestNGCucumberTests {
 
