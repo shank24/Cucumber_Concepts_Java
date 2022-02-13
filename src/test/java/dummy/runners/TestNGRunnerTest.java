@@ -15,6 +15,7 @@ import static io.cucumber.testng.CucumberOptions.SnippetType.CAMELCASE;
         glue = {"dummy.stepdef","dummy.hooks"},
         features = "src/test/resources/dummy"
 )
+
 public class TestNGRunnerTest extends AbstractTestNGCucumberTests {
 
     @BeforeClass
