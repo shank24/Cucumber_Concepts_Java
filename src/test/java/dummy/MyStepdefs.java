@@ -1,4 +1,4 @@
-package practice.dummy;
+package dummy;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,54 +16,37 @@ public class MyStepdefs {
 
     We can use @When also, it does not consider keyword into consideration.
      */
-    @Given("^I am dummy$")
-    public void iAmDummy() throws Throwable {
+    @Given("I am dummy")
+    public void iAmDummy() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-
-    @When("^I do dummy things$")
-    public void iDoDummyThings() throws Throwable {
+    @When("I do dummy things")
+    public void iDoDummyThings() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
-    @Then("^dummy things happen$")
-    public void dummyThingsHappen() throws Throwable {
+    @Then("dummy things happen")
+    public void dummyThingsHappen() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
-    }
-
-    @Given("My Account Balance is ${int}")
-    public void myAccountBalanceIs$(int arg0) {
-        
-    }
-
-    @When("I withdraw ${int}")
-    public void iWithdraw$(int arg0) {
-        
-    }
-
-    @Then("the account balance should be ${int}")
-    public void theAccountBalanceShouldBe$(int arg0) {
-        
     }
 
     @Given("I'm on the store page")
-    public void i_m_on_the_store_page() {
+    public void iMOnTheStorePage() {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
     @When("I add a {string} to the Cart")
-    public void i_add_a_to_the_cart(String string) {
+    public void iAddAToTheCart(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
     @Then("I see {int} {string} in the cart")
-    public void i_see_in_the_cart(Integer int1, String string) {
+    public void iSeeInTheCart(Integer int1, String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-
 }
