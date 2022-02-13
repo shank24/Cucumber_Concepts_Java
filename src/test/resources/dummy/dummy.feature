@@ -1,4 +1,3 @@
-
 @dummyFeatures
 Feature: Add to cart
 
@@ -44,17 +43,17 @@ Feature: Add to cart
       Then dummy things happen
 
 
-  @dummyScenario
-  Scenario: Bank Scenario
-    Given My Account Balance is $100
-    When I withdraw $50
-    Then the account balance should be $50
+    @dummyScenario
+    Scenario: Bank Scenario
+      Given My Account Balance is $100
+      When I withdraw $50
+      Then the account balance should be $50
 
 
-  Scenario: Bank Scenario
-    Given My Account Balance is $50
-    When I withdraw $50
-    Then the account balance should be $0
+    Scenario: Bank Scenario
+      Given My Account Balance is $50
+      When I withdraw $50
+      Then the account balance should be $0
 
     Scenario Outline: Bank Scenario
       Given My Account Balance is $<opening balance>
