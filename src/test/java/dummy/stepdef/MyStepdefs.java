@@ -39,12 +39,12 @@ public class MyStepdefs {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-    @When("I add a {string} to the Cart")
+    @When("I add a {word} to the Cart")
     public void iAddAToTheCart(String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
-    @Then("I see {int} {string} in the cart")
+    @Then("I see {int} {word} in the cart")
     public void iSeeInTheCart(Integer int1, String string) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
