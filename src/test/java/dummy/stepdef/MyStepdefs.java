@@ -34,7 +34,7 @@ public class MyStepdefs {
         throw new io.cucumber.java.PendingException();
     }
 
-    @Given("I'm on the store page")
+    @Given("I'm on the Store/Product page")
     public void iMOnTheStorePage() {
         // Write code here that turns the phrase above into concrete actions
     }
