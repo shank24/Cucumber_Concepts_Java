@@ -42,8 +42,8 @@ public class MyStepdefs {
     public void iAddAToTheCart(String string) {
         // Write code here that turns the phrase above into concrete actions
     }
-    @Then("I see {int} {word} in the cart")
-    public void iSeeInTheCart(Integer int1, String string) {
+    @Then("I see {int} product(s) in the cart")
+    public void iSeeInTheCart(Integer int1) {
         // Write code here that turns the phrase above into concrete actions
     }
 }

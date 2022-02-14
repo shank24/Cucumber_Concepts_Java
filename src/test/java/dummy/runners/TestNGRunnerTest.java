@@ -10,7 +10,7 @@ import static io.cucumber.testng.CucumberOptions.SnippetType.CAMELCASE;
         plugin =  {"pretty", "html:target/cucumber.html", "summary"},
         snippets = CAMELCASE,
         dryRun = true,
-        monochrome=true,
+        monochrome=false,
         tags = "@Scenario1 or @Scenario2",
         glue = {"dummy.stepdef","dummy.hooks"},
         features = "src/test/resources/dummy"
