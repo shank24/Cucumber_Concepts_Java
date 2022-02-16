@@ -2,9 +2,9 @@ Feature: DataTable Demo
 
   Rule: Values from DataTable
 
-    Scenario: SINGLE ROW WITH NO HEADER
+    Scenario: SINGLE ROW WITH HEADER
       Given my credentials
-      | john | john123 |
-      | bill | bill123 |
+      | username | password |
+      | bill     | bill123  |
 
 
