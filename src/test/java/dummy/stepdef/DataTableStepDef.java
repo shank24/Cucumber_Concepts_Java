@@ -16,8 +16,10 @@ public class DataTableStepDef {
     //With Java Collection
     @Given("my credentials")
     public void myCredentials(List<Map<String,String>> customers) {
-        System.out.println("USERNAME " + customers.get(0).get("username"));
-        System.out.println("PASSWORD " + customers.get(0).get("password"));
+        System.out.println("ROW 0 USERNAME " + customers.get(0).get("username"));
+        System.out.println("ROW 0 USERNAME " + customers.get(0).get("password"));
+        System.out.println("ROW 1 USERNAME " + customers.get(1).get("username"));
+        System.out.println("ROW 1 PASSWORD " + customers.get(1).get("password"));
     }
 
     private void extracted(List<List<String>> reds) {
