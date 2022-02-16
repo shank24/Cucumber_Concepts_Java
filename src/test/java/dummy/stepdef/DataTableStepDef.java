@@ -1,22 +1,25 @@
 package dummy.stepdef;
 
-import io.cucumber.datatable.DataTable;
+import dummy.objects.Customer;
+import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
 import java.util.List;
 
 public class DataTableStepDef {
 
-    //With Cucumber DataTable
-    /*@Given("my credentials")
-    public void myCredentials(DataTable datatable) {
-        List<List<String>> reds = datatable.asLists();
-        extracted(reds);
-    }*/
-
+    @DataTableType
+    public Customer customerEntry(List<String> entry){
+        return new Customer(entry.get(0), entry.get(1));
+    }
     //With Java Collection
     @Given("my credentials")
-    public void myCredentials(List<List<String>> reds) {
-        extracted(reds);
+    public void myCredentials(List<Customer> customers) {
+        System.out.println("ROW 0 USERNAME " + customers.get(0).getUsername());
+        System.out.println("ROW 0 PASSWORD " + customers.get(0).getPassword());
+        System.out.println("ROW 1 USERNAME " + customers.get(1).getUsername());
+        System.out.println("ROW 1 PASSWORD " + customers.get(1).getPassword());
+
+        //extracted(reds);
     }
 
     private void extracted(List<List<String>> reds) {
@@ -26,4 +29,13 @@ public class DataTableStepDef {
             }
         }
     }
+
+
+    //With Cucumber DataTable
+    /*@Given("my credentials")
+    public void myCredentials(DataTable datatable) {
+        List<List<String>> reds = datatable.asLists();
+        extracted(reds);
+    }*/
+
 }

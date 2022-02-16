@@ -5,7 +5,6 @@ Feature: DataTable Demo
     Scenario: SINGLE ROW WITH NO HEADER
       Given my credentials
       | john | john123 |
-      | ram  | ram123  |
-
+      | bill | bill123 |
 
 
