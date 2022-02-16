@@ -2,7 +2,7 @@ Feature: DataTable Demo
 
   Rule: Values from DataTable
 
-    Scenario: Data Table
+    Scenario: SINGLE ROW WITH NO HEADER
       Given my credentials
       | john | john123 |
 
