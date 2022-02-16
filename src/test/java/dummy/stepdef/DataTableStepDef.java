@@ -14,10 +14,41 @@ import java.util.Map;
 public class DataTableStepDef {
 
     @DataTableType
-    public Customer customerEntry(List<String> entry){
-        return new Customer(entry.get(0), entry.get(1));
+    public Customer customerEntry(Map<String, String> entry){
+        return new Customer(entry.get("username"), entry.get("password"));
     }
 
+
+    @Given("my credentials")
+    public void myCredentials(@Transpose DataTable datatable) {
+        List<Map<String, String>> customer = datatable.asMaps();
+        System.out.println("ROW 0 USERNAME " + customer.get(0).get("username"));
+        System.out.println("ROW 1 PASSWORD " + customer.get(1).get("username"));
+
+        System.out.println("ROW 0 USERNAME " + customer.get(0).get("password"));
+        System.out.println("ROW 1 PASSWORD " + customer.get(1).get("password"));
+    }
+
+
+
+
+/*
+    @Given("my credentials")
+    public void myCredentials(Map<String, String> customer) {
+        System.out.println("ROW 0 USERNAME " + customer.get("username"));
+        System.out.println("ROW 0 PASSWORD " + customer.get("password"));
+    }
+*/
+
+    /*
+
+    // Transpose usage for converting the data into list (Without Header)
+    Converting Row With a header into column with a header.
+    | username | bill     |
+    | password | bill123  |
+
+    | username | password |
+    | bill     | bill123  |
 
     @Given("my credentials")
     public void myCredentials(@Transpose Customer customer) {
@@ -26,9 +57,16 @@ public class DataTableStepDef {
     }
 
 
+    // Transpose usage for converting the data into list (Without Header)
+    | bill    |
+    | bill123 |
 
+    @Given("my credentials")
+    public void myCredentials(@Transpose Customer customer) {
+        System.out.println("ROW 0 USERNAME " + customer.getUsername());
+        System.out.println("ROW 0 PASSWORD " + customer.getPassword());
+    }
 
-    /*
 
     // Single Column With Header
     @Given("my credentials")

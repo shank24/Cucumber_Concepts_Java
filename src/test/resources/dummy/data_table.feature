@@ -4,6 +4,6 @@ Feature: DataTable Demo
 
     Scenario: SINGLE COLUMN WITH NO HEADER
       Given my credentials
-      | bill     |
-      | bill123  |
+      | username | john | john123 |
+      | password | bill | bill123 |
 
