@@ -3,31 +3,41 @@ package dummy.stepdef;
 import dummy.objects.Customer;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.DataTableType;
+import io.cucumber.java.Transpose;
 import io.cucumber.java.en.Given;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class DataTableStepDef {
 
     @DataTableType
-    public Customer customerEntry(Map<String, String> entry){
-        return new Customer(entry.get("username"), entry.get("password"));
+    public Customer customerEntry(List<String> entry){
+        return new Customer(entry.get(0), entry.get(1));
     }
 
 
     @Given("my credentials")
-    public void myCredentials(DataTable datatable) {
-        List<String> customer = datatable.asList();
-        System.out.println("ROW 0 USERNAME " + customer.get(0));
-        System.out.println("ROW 0 PASSWORD " + customer.get(1));
+    public void myCredentials(@Transpose Customer customer) {
+        System.out.println("ROW 0 USERNAME " + customer.getUsername());
+        System.out.println("ROW 0 PASSWORD " + customer.getPassword());
     }
 
 
 
 
     /*
+
+    // Single Column With Header
+    @Given("my credentials")
+    public void myCredentials(Map<String, String> customer) {
+        //Map<String, String> customer = datatable.asMap();
+        System.out.println("ROW 0 USERNAME " + customer.get("username"));
+        System.out.println("ROW 0 PASSWORD " + customer.get("password"));
+    }
+
 
     //With Cucumber DataTable
 
