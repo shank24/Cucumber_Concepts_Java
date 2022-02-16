@@ -1,8 +1,11 @@
 package dummy.stepdef;
 
 import dummy.objects.Customer;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -14,13 +17,11 @@ public class DataTableStepDef {
     }
 
 
-    //With Map<String, String>
     @Given("my credentials")
-    public void myCredentials(List<Customer> customer) {
-        System.out.println("ROW 0 USERNAME " + customer.get(0).getUsername());
-        System.out.println("ROW 0 USERNAME " + customer.get(0).getPassword());
-        System.out.println("ROW 0 USERNAME " + customer.get(1).getUsername());
-        System.out.println("ROW 0 USERNAME " + customer.get(1).getPassword());
+    public void myCredentials(DataTable datatable) {
+        List<String> customer = datatable.asList();
+        System.out.println("ROW 0 USERNAME " + customer.get(0));
+        System.out.println("ROW 0 PASSWORD " + customer.get(1));
     }
 
 
@@ -35,7 +36,6 @@ public class DataTableStepDef {
         List<List<String>> reds = datatable.asLists();
         extracted(reds);
     }
-
 
     //With Customer Object
 

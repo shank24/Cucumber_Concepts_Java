@@ -2,9 +2,8 @@ Feature: DataTable Demo
 
   Rule: Values from DataTable
 
-    Scenario: MULTIPLE ROW WITH HEADERS
+    Scenario: SINGLE COLUMN WITH NO HEADER
       Given my credentials
-      | username | password |
-      | bill     | bill123  |
-      | jill     | jill123  |
+      | bill     |
+      | bill123  |
 
