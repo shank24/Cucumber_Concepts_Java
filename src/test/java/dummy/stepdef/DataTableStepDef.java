@@ -5,6 +5,8 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.Transpose;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,6 +31,17 @@ public class DataTableStepDef {
         System.out.println("ROW 1 PASSWORD " + customer.get(1).get("password"));
     }
 
+
+    @When("I enter my credentials")
+    public void i_enter_my_credentials() {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new io.cucumber.java.PendingException();
+    }
+    @Then("allow me to login")
+    public void allow_me_to_login() {
+        // Write code here that turns the phrase above into concrete actions
+        //throw new io.cucumber.java.PendingException();
+    }
 
 
 
