@@ -6,7 +6,7 @@ import io.cucumber.java.ParameterType;
 public class CustomParameterType {
 
 
-    @ParameterType("\"Blue Shoes\"|\"Yellow Shoes\"")
+    @ParameterType(".*")
     public Product product(String name){
         return new Product(name);
     }
