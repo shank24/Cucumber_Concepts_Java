@@ -1,9 +1,6 @@
 package dummy.hooks;
 
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.Before;
-import io.cucumber.java.BeforeAll;
+import io.cucumber.java.*;
 
 public class CucumberHooks {
 
@@ -23,14 +20,21 @@ public class CucumberHooks {
 
     //Executed before each of the example listed in the Scenario Outline
     @Before
-    public void before(){
+    public void before(Scenario scenario){
         System.out.println("Before Hook");
+        System.out.println("SCENARIO NAME -> " + scenario.getName());
+        System.out.println("SCENARIO LINE -> " + scenario.getLine());
+        System.out.println("SCENARIO TAGS -> " + scenario.getSourceTagNames());
+        System.out.println("SCENARIO STATUS -> " + scenario.getStatus());
+        System.out.println("SCENARIO URI -> " + scenario.getUri());
+        System.out.println("SCENARIO IsFailed -> " + scenario.isFailed() + "\n");
+
     }
 
 
     //Executed before each of the example listed in the Scenario Outline
     @After
-    public void after(){
+    public void after(Scenario scenario){
         System.out.println("After Hook");
     }
 }
