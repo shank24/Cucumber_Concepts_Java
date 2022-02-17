@@ -18,32 +18,32 @@ public class CucumberHooks {
 
 
     //Executed before each of the example listed in the Scenario Outline
-    @Before (order = 1)
+    @Before ("@Scenario1")
     public void beforeOrder1(Scenario scenario){
-        System.out.println("Before Hook Order 1");
+        System.out.println("Before Hook For Scenario 1");
         //scenarioInfo(scenario);
     }
 
     //Executed before each of the example listed in the Scenario Outline
-    @Before (order = 0)
+    @Before ("@Scenario2")
     public void beforeOrder0(Scenario scenario){
-        System.out.println("Before Hook Order 0");
+        System.out.println("Before Hook For Scenario 2");
         //scenarioInfo(scenario);
     }
 
 
 
     //Executed before each of the example listed in the Scenario Outline
-    @After(order = 1)
+    @After("@Scenario1")
     public void afterOrder1(Scenario scenario){
-        System.out.println("After Hook Order 1");
+        System.out.println("After Hook For Scenario 1");
         //scenarioInfo(scenario);
     }
 
     //Executed before each of the example listed in the Scenario Outline
-    @After(order = 0)
+    @After("@Scenario2")
     public void afterOrder0(Scenario scenario){
-        System.out.println("After Hook Order 0");
+        System.out.println("After Hook For Scenario 2");
         //scenarioInfo(scenario);
     }
 
