@@ -11,7 +11,7 @@ import static io.cucumber.testng.CucumberOptions.SnippetType.CAMELCASE;
         snippets = CAMELCASE,
         dryRun = true,
         monochrome=false,
-        tags = "@featuretag",
+        tags = "@stage or @featuretag",
         glue = {"dummy.stepdef","dummy.hooks","dummy.types"},
         features = "src/test/resources/dummy"
 )
@@ -29,3 +29,12 @@ public class TestNGRunnerTest extends AbstractTestNGCucumberTests {
         System.out.println("In After Class");
     }
 }
+
+/*
+CLI Command -
+mvn clean test
+/-Dcucumber.filter.tags="@stage"
+/-Dcucumber.features="src/test/resources/dummy"
+/-Dcucumber.glue=dummy.stepdef,dummy.hooks,dummy.types
+
+ */
