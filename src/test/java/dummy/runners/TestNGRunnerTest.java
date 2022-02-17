@@ -11,7 +11,7 @@ import static io.cucumber.testng.CucumberOptions.SnippetType.CAMELCASE;
         snippets = CAMELCASE,
         dryRun = true,
         monochrome=false,
-        tags = "@stage or @featuretag",
+        tags = "not @featuretag",
         glue = {"dummy.stepdef","dummy.hooks","dummy.types"},
         features = "src/test/resources/dummy"
 )
@@ -36,5 +36,4 @@ mvn clean test
 /-Dcucumber.filter.tags="@stage"
 /-Dcucumber.features="src/test/resources/dummy"
 /-Dcucumber.glue=dummy.stepdef,dummy.hooks,dummy.types
-
  */
