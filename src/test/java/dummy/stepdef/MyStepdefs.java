@@ -39,7 +39,8 @@ public class MyStepdefs {
 
     }
     @Then("I see {int} {product} in the cart")
-    public void iSeeInTheCart(Integer int1, Product product) {
+    public void
+    iSeeInTheCart(Integer int1, Product product) {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("Product Name  " + product.getName());
     }
