@@ -11,7 +11,7 @@ import static io.cucumber.testng.CucumberOptions.SnippetType.CAMELCASE;
         snippets = CAMELCASE,
         dryRun = true,
         monochrome=false,
-        tags = "@Scenario1",
+        tags = "@featuretag",
         glue = {"dummy.stepdef","dummy.hooks","dummy.types"},
         features = "src/test/resources/dummy"
 )

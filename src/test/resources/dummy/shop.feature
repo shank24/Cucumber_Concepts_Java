@@ -1,12 +1,35 @@
-Feature: Add to cart
 
-  Rule: Add from store
+Feature: Add to cart #1
 
-    @Scenario1
-    Scenario Outline: Add one quantity to the cart
+  @featuretag
+  Rule: Rule1
+
+    Scenario Outline: Scenario 1
       Given I'm on the Store page
       When I add a "<product_name>" to the Cart
       Then I see 1 "<product_name>" in the cart
+
+      Examples:
+        | product_name |
+        | Blue Shoes   |
+
+    Scenario Outline: Scenario 2
+      Given I'm on the Store page
+      When I add a "<product_name>" to the Cart
+      Then I see 1 "<product_name>" in the cart
+
+      Examples:
+        | product_name |
+        | Blue Shoes   |
+
+
+  Rule: Rule 2
+
+    Scenario Outline: Scenario 3
+      Given I'm on the Store page
+      When I add a "<product_name>" to the Cart
+      Then I see 1 "<product_name>" in the cart
+
       Examples:
         | product_name |
         | Blue Shoes   |
