@@ -17,7 +17,7 @@ Feature: Add to cart #1
       @prod
       Examples:
         | product_name |
-        | Red Shoes   |
+        | Red Shoes    |
 
   Scenario Outline: Scenario 2
       Given I'm on the Store page
